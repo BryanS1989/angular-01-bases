@@ -22,9 +22,18 @@
   Borrar Héroe
 </button>
 
-<h3>
-  <span>Borrado: {{ deletedHeroe }}</span>
-</h3>
+<h2 *ngIf="deletedHeroe; else noBorrado">
+  Héroe borrado: <small>{{ deletedHeroe }}</small>
+</h2>
+
+<!-- <h2 *ngIf="!deletedHeroe">No ha borrado ningún héroe</h2> -->
+
+<!--
+  #noBorrado es una referencia local, si no se cumple el ngIf mostraremos la template
+-->
+<ng-template #noBorrado>
+  <h2 *ngIf="!deletedHeroe">No ha borrado ningún héroe</h2>
+</ng-template>
 
 <ul>
   <li *ngFor="let heroe of heroes; let i = index">

@@ -24,9 +24,9 @@ export class ListadoComponent /*implements OnInit*/ {
   borrarHeroe () {
     console.log("[app-listado] borrarHeroe()");
 
-    this.deletedHeroe = this.heroes.pop() || "No hay más héroes!!!";
-    console.log("[app-listado]    Héroe borrado: " + this.deletedHeroe);
+    this.deletedHeroe = this.heroes.pop() || '';
 
+    console.log("[app-listado]    Héroe borrado: " + this.deletedHeroe);
   }
 
 }
