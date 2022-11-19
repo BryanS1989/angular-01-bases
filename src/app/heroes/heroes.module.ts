@@ -18,7 +18,7 @@ import { ListadoComponent } from "./listado/listado.component";
 
   // Módulos que se importarán
   imports : [
-    CommonModule
+    CommonModule  // Ofrece directivas como el ngIf o ngFor
   ]
 })
 export class HeroesModule {
