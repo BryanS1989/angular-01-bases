@@ -11,9 +11,9 @@
     <hr>
 
     <ul>
-      <li>Krillin - 700</li>
-      <li>Goku - 15000</li>
-      <li>Vegeta - 8500</li>
+      <li *ngFor="let personaje of personajes; let i = index">
+        {{ personaje.nombre}} - {{ personaje.poder | number}}
+      </li>
     </ul>
   </div>
   <div class="col">
