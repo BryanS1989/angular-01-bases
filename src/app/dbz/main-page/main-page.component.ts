@@ -11,9 +11,20 @@ interface Personaje {
 })
 export class MainPageComponent implements OnInit {
 
-  nuevoPersonaje : Personaje = {
-    nombre : 'Trunks',
-    poder : 14000
+  personajes      : Personaje[] = [
+    {
+      nombre : 'Goku',
+      poder : 15000
+    },
+    {
+      nombre : 'Vegeta',
+      poder : 7500
+    }
+  ];
+
+  nuevoPersonaje  : Personaje   = {
+    nombre : '',
+    poder : 0
   }
 
   constructor() { }
@@ -23,10 +34,23 @@ export class MainPageComponent implements OnInit {
 
   agregar() {
     console.log('[DbzModule] [MainPageComponent] [agregar()]', this.nuevoPersonaje);
+
+    if (this.nuevoPersonaje.nombre.trim().length === 0) {
+      return;
+    }
+
+    this.personajes.push({...this.nuevoPersonaje});
+
+    this.defaultValues();
   }
 
-  cambiarNombre(event : any) {
-    console.log('[DbzModule] [MainPageComponent] [cambiarNombre()]', event.target.value);
+  defaultValues () {
+    this.nuevoPersonaje.nombre = '';
+    this.nuevoPersonaje.poder = 0;
   }
+
+  // cambiarNombre(event : any) {
+  //   console.log('[DbzModule] [MainPageComponent] [cambiarNombre()]', event.target.value);
+  // }
 
 }
