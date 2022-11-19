@@ -4,6 +4,10 @@
 
 <div class="row">
   <div class="col">
+    <app-personajes
+      [listaPersonajes]="personajes"
+    ></app-personajes>
+  <!--
     <h2>
       Personajes
     </h2>
@@ -15,6 +19,7 @@
         {{ personaje.nombre}} - {{ personaje.poder | number}}
       </li>
     </ul>
+  -->
   </div>
   <div class="col">
     <h2>Agregar <small>{{ nuevoPersonaje.nombre }}</small></h2>
