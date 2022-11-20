@@ -7,51 +7,11 @@
     <app-personajes
       [listaPersonajes]="personajes"
     ></app-personajes>
-  <!--
-    <h2>
-      Personajes
-    </h2>
-
-    <hr>
-
-    <ul>
-      <li *ngFor="let personaje of personajes; let i = index">
-        {{ personaje.nombre}} - {{ personaje.poder | number}}
-      </li>
-    </ul>
-  -->
   </div>
   <div class="col">
     <app-agregar
       [listaPersonajes]="personajes"
       [nuevoPersonaje]="nuevoPersonaje"
     ></app-agregar>
-  <!--
-    <h2>Agregar <small>{{ nuevoPersonaje.nombre }}</small></h2>
-
-    <hr>
-
-    <form (ngSubmit)="agregar()">
-      <input type="text"
-        placeholder="Nombre"
-        name="nombre"
-        [(ngModel)]="nuevoPersonaje.nombre"
-      >
-      !-- [value]="nuevoPersonaje.nombre"
-        (input)="cambiarNombre( $event )"
-      > --
-
-      <input type="number"
-        placeholder="Poder"
-        name="poder"
-        [value]="nuevoPersonaje.poder"
-        [(ngModel)]="nuevoPersonaje.poder"
-      >
-
-      <button type="submit">
-        Agregar
-      </button>
-    </form>
-    -->
   </div>
 </div>

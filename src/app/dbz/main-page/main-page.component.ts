@@ -22,29 +22,4 @@ export class MainPageComponent {
     nombre : 'Mutenroshi',
     poder : 1000
   }
-
-  /*
-
-  agregar() {
-    console.log('[DbzModule] [MainPageComponent] [agregar()]', this.nuevoPersonaje);
-
-    if (this.nuevoPersonaje.nombre.trim().length === 0) {
-      return;
-    }
-
-    this.personajes.push({...this.nuevoPersonaje});
-
-    this.defaultValues();
-  }
-
-  defaultValues () {
-    this.nuevoPersonaje.nombre = '';
-    this.nuevoPersonaje.poder = 0;
-  }
-  */
-
-  // cambiarNombre(event : any) {
-  //   console.log('[DbzModule] [MainPageComponent] [cambiarNombre()]', event.target.value);
-  // }
-
 }
