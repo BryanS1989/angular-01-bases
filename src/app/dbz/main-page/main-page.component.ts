@@ -26,6 +26,9 @@ export class MainPageComponent {
   agregarNuevoPersonaje( newCharacter : Personaje ) {
     console.log('[DbzModule] [MainPageComponent] [agregarNuevoPersonaje()]', newCharacter);
 
+    // Breakpoing para debugador en Chrome
+    // debugger;
+
     this.personajes.push({...newCharacter});
   }
 }
