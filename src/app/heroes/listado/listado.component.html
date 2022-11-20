@@ -17,13 +17,10 @@
 </ul>
 -->
 
-
-<button (click)="borrarHeroe()">
-  Borrar Héroe
-</button>
+<button (click)="borrarHeroe()">Borrar Héroe</button>
 
 <h2 *ngIf="deletedHeroe; else noBorrado">
-  Héroe borrado: <small>{{ deletedHeroe }}</small>
+    Héroe borrado: <small>{{ deletedHeroe }}</small>
 </h2>
 
 <!-- <h2 *ngIf="!deletedHeroe">No ha borrado ningún héroe</h2> -->
@@ -32,13 +29,11 @@
   #noBorrado es una referencia local, si no se cumple el ngIf mostraremos la template
 -->
 <ng-template #noBorrado>
-  <h2 *ngIf="!deletedHeroe">No ha borrado ningún héroe</h2>
+    <h2 *ngIf="!deletedHeroe">No ha borrado ningún héroe</h2>
 </ng-template>
 
 <ul>
-  <li *ngFor="let heroe of heroes; let i = index">
-    {{ i + 1 }} - {{ heroe }}
-  </li>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{ i + 1 }} - {{ heroe }}
+    </li>
 </ul>
-
-

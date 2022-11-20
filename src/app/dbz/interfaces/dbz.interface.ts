@@ -1,4 +1,4 @@
 export interface Personaje {
-  nombre : string;
-  poder : number;
+    nombre: string;
+    poder: number;
 }

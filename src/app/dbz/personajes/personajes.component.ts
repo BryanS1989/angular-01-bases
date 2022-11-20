@@ -3,18 +3,15 @@ import { Personaje } from '../interfaces/dbz.interface';
 import { DbzService } from '../services/dbz.service';
 
 @Component({
-  selector: 'app-personajes',
-  templateUrl: './personajes.component.html'
+    selector: 'app-personajes',
+    templateUrl: './personajes.component.html',
 })
 export class PersonajesComponent {
+    // @Input('listaPersonajes') personajes : Personaje[] = [];
 
-  // @Input('listaPersonajes') personajes : Personaje[] = [];
+    get personajes() {
+        return this.dbzService.personajes;
+    }
 
-  get personajes() {
-    return this.dbzService.personajes;
-  }
-
-  constructor( private dbzService : DbzService ) {
-
-  }
+    constructor(private dbzService: DbzService) {}
 }

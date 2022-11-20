@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-listado',
-  templateUrl: './listado.component.html',
+    selector: 'app-listado',
+    templateUrl: './listado.component.html',
 })
 export class ListadoComponent /*implements OnInit*/ {
-  /*
+    /*
   constructor() {
     console.log("[app-listado] Constructor()");
   }
@@ -15,18 +15,20 @@ export class ListadoComponent /*implements OnInit*/ {
   }
   */
 
-  public  heroes        : string[]  = [
-    'Spiderman', 'Ironman', 'Hulk',
-    'Thor', 'Capitán América'
-  ];
-  public  deletedHeroe  : string    = '';
+    public heroes: string[] = [
+        'Spiderman',
+        'Ironman',
+        'Hulk',
+        'Thor',
+        'Capitán América',
+    ];
+    public deletedHeroe: string = '';
 
-  borrarHeroe () {
-    console.log("[app-listado] borrarHeroe()");
+    borrarHeroe() {
+        console.log('[app-listado] borrarHeroe()');
 
-    this.deletedHeroe = this.heroes.pop() || '';
+        this.deletedHeroe = this.heroes.pop() || '';
 
-    console.log("[app-listado]    Héroe borrado: " + this.deletedHeroe);
-  }
-
+        console.log('[app-listado]    Héroe borrado: ' + this.deletedHeroe);
+    }
 }
