@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html'
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent {
 
   personajes      : Personaje[] = [
     {
@@ -19,14 +19,11 @@ export class MainPageComponent implements OnInit {
   ];
 
   nuevoPersonaje  : Personaje   = {
-    nombre : '',
-    poder : 0
+    nombre : 'Mutenroshi',
+    poder : 1000
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  /*
 
   agregar() {
     console.log('[DbzModule] [MainPageComponent] [agregar()]', this.nuevoPersonaje);
@@ -44,6 +41,7 @@ export class MainPageComponent implements OnInit {
     this.nuevoPersonaje.nombre = '';
     this.nuevoPersonaje.poder = 0;
   }
+  */
 
   // cambiarNombre(event : any) {
   //   console.log('[DbzModule] [MainPageComponent] [cambiarNombre()]', event.target.value);

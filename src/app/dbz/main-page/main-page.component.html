@@ -22,6 +22,11 @@
   -->
   </div>
   <div class="col">
+    <app-agregar
+      [listaPersonajes]="personajes"
+      [nuevoPersonaje]="nuevoPersonaje"
+    ></app-agregar>
+  <!--
     <h2>Agregar <small>{{ nuevoPersonaje.nombre }}</small></h2>
 
     <hr>
@@ -32,9 +37,9 @@
         name="nombre"
         [(ngModel)]="nuevoPersonaje.nombre"
       >
-      <!-- [value]="nuevoPersonaje.nombre"
+      !-- [value]="nuevoPersonaje.nombre"
         (input)="cambiarNombre( $event )"
-      > -->
+      > --
 
       <input type="number"
         placeholder="Poder"
@@ -47,5 +52,6 @@
         Agregar
       </button>
     </form>
+    -->
   </div>
 </div>
