@@ -22,4 +22,10 @@ export class MainPageComponent {
     nombre : 'Mutenroshi',
     poder : 1000
   }
+
+  agregarNuevoPersonaje( newCharacter : Personaje ) {
+    console.log('[DbzModule] [MainPageComponent] [agregarNuevoPersonaje()]', newCharacter);
+
+    this.personajes.push({...newCharacter});
+  }
 }
